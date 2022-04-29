@@ -1,0 +1,10 @@
+package problem_statement1_1;
+
+public class Evennumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

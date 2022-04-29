@@ -1,0 +1,10 @@
+package problem_statement6_1;
+
+public class StudentNameList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

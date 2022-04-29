@@ -1,0 +1,22 @@
+package problem_statement1_3;
+
+public class MainBook {
+	public void createBooks() {
+		Book b[] = new Book[2];		 
+	      b[1] = new Book("Java Programing ", 350.50);
+	      b[2] = new Book("Let Us C", 200.00);
+	      for(int i = 0; i<b.length; i++) {
+		         b[i].display();
+		         System.out.println(" ");
+	      }
+	}
+	public void showBooks() {
+		  	createBooks();
+	}
+
+	public static void main(String[] args) {
+		MainBook c1 = new MainBook();  
+		c1.showBooks();
+	}
+
+}

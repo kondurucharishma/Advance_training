@@ -1,0 +1,33 @@
+package problem_statement6_3;
+
+public class Employee {
+	private int EmployeeNo;
+	private String  EmployeeName, address;
+	
+	public Employee (int EmployeeNo, String  EmployeeName, String address) {
+		
+		super();
+		this.EmployeeNo=EmployeeNo;
+		this. EmployeeName= EmployeeName;
+		this.address=address;
+	}
+	
+	public int getEmployeeNo() {
+		return EmployeeNo;
+	}
+	public void setEmployeeNo(int EmployeeNo) {
+		this.EmployeeNo = EmployeeNo;
+	}
+	public String getEmployeeName() {
+		return  EmployeeName;
+	}
+	public void setEname(String  EmployeeName) {
+		this.EmployeeName =  EmployeeName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+}

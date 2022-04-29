@@ -1,0 +1,37 @@
+package problem_statement5_1;
+
+public class ManipulateString {
+
+	public static void main(String[] args) {
+String txt= "JAVA is Simple";
+		
+		System.out.println(txt.toUpperCase()); 
+		System.out.println(txt.toLowerCase()); 
+		
+		
+		String[] s1=txt.split("\\s");	
+		for(String w:s1){  
+			System.out.print(w.charAt(0)); 
+			System.out.print(" ");
+		}
+		//System.out.println(" ");
+		
+		String[] s2=txt.split("//s"); 
+		for(String w:s2){  
+			System.out.println(" "); 
+		}
+		
+		
+		StringBuilder s3= new StringBuilder("JAVA is simple");
+		
+		Object words;
+		System.out.println(s3.toString());
+		StringBuilder reverseStr = s3.reverse();
+		System.out.println( reverseStr.toString());
+		
+		
+		System.out.println("Total length is: " + txt.length());
+	
+	}
+
+}

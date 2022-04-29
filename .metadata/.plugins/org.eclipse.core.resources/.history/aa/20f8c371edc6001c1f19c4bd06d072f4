@@ -1,0 +1,128 @@
+package com.BankAccount;
+
+public class BankAccount {
+	int accNo;
+    String CustName;
+    String accType;
+    double balance;
+   
+    public int getAccount_number() {
+        return accNo;
+    }
+   
+    public void setAccount_number(int account_number) {
+        this.accNo = account_number;
+    }
+   
+    public String getName() {
+        return CustName;
+    }
+   
+    public void setName(String name) {
+        this.CustName = name;
+    }
+   
+    public String getAccount_type() {
+        return accType;
+    }
+   
+    public void setAccount_type(String account_type) {
+        this.accType = account_type;
+    }
+   
+    public double getBalance() {
+       
+        if( balance <1000)
+        {
+        try
+        {   
+            throw new NumberFormatException();
+        }
+        catch(NumberFormatException nw)
+        {
+            System.out.println("Balance is low"+balance);
+        }
+        }
+       
+        return balance;
+       
+    }
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }//end setter and getter
+
+    public BankAccount() {
+       
+        this.accNo = 10122;
+        this.CustName = "POOJA";
+        this.accType = "Saving";
+        this.balance = 500;
+    }
+   
+   
+    public BankAccount(int account_number, String name, String account_type,
+            double balance) {
+       
+        this.accNo = account_number;
+        this.CustName = name;
+        this.accType = account_type;
+        this.balance = balance;
+    }
+    void deposit(double amt)
+    {
+        if(amt<0)
+        {
+            try
+            {
+                throw new NumberFormatException();
+            }
+            catch(NumberFormatException nf)
+            {
+                System.out.println("Negaive Amount cant be deposited");
+            }
+        }
+        else
+        {
+            balance=getBalance()+amt;
+            System.out.println("Current balance is ="+balance);
+           
+        }
+       
+    }
+     public void withdraw(double amt){
+         if(amt>1000)
+            {
+                try
+                {
+                    throw new NumberFormatException();
+                }
+                catch(NumberFormatException nf)
+                {
+                    System.out.println("WE CANT DEPOSITE AMOUNT INSUFFICENT BALANCE ");
+                }
+            }
+            else
+            {
+                balance=getBalance()-amt;
+                System.out.println("Current balance is ="+balance);
+               
+            }
+       
+    }
+     void display()
+     {
+    System.out.println("Balance is ="+getBalance());   
+     }
+	public static void main(String[] args) {
+		 
+        BankAccount b=new BankAccount();
+        b.deposit(2000);
+        b.display();
+        b.withdraw(500);
+        b.display();
+        b.withdraw(2000);
+        b.getBalance();
+        b.display();
+	}
+
+}

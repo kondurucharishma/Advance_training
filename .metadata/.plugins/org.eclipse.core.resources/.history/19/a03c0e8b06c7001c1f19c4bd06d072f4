@@ -1,0 +1,5 @@
+package problem_statement7_2;
+
+public class NameNotValidException {
+
+}
